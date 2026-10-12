@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="观澜中国史：从传说到清朝的沉浸式中国历史学习平台。">
+  <title>观澜中国史 · 历史原来可以抵达</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700;900&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient-grid"></div>
+  <header class="topbar">
+    <a class="wordmark" href="#" data-go="home" aria-label="观澜中国史首页"><span class="seal">观</span><span>观澜中国史</span></a>
+    <nav class="main-nav" aria-label="主导航"><button class="nav-active" data-go="home">漫游</button><button data-go="chronicle">长河</button><button data-go="atlas">山河</button><button data-go="people">人物</button></nav>
+    <div class="top-actions"><button class="icon-control" id="openSearch" aria-label="搜索" title="搜索"><i data-lucide="search"></i></button><button class="profile" aria-label="学习档案"><span>12</span><small>已读</small></button></div>
+  </header>
+  <main>
+    <section class="view home-view active-view" id="home">
+      <section class="opening">
+        <div class="opening-intro">
+          <p class="kicker"><span></span>中国历史学习馆</p>
+          <h1>历史不是已经结束的事，<br><em>它仍在我们的语言里流动。</em></h1>
+          <p class="opening-copy">沿着人物、器物、道路与转折时刻，回到三皇五帝至清朝的历史现场。每一段叙事都标明：它是史实、传说，还是后世的文学想象。</p>
+          <div class="opening-actions"><button class="button-ink" data-go="reader">从一段故事出发 <i data-lucide="arrow-up-right"></i></button><button class="quiet-action" data-go="chronicle">查看历史长河 <i data-lucide="arrow-down"></i></button></div>
+          <div class="proof-line"><span class="signal"></span>今天适合阅读 <strong>《赤壁之前：一封逼降信》</strong><button class="line-arrow" data-go="reader" aria-label="阅读今日故事"><i data-lucide="arrow-right"></i></button></div>
+        </div>
+        <div class="artifact-stage">
+          <div class="artifact-copy"><p>以器物为证</p><strong>利簋</strong><span>约前 1046 年</span></div>
+          <div class="artifact-frame"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Western%20Zhou%20%22Li%22%20Bronze%20Gui%20%289830207166%29.jpg?width=1200" alt="西周利簋，青铜器"></div>
+          <div class="artifact-foot"><span>牧野之战后的第一天</span><span>▣ 史料与考古</span></div>
+        </div>
+      </section>
+      <section class="pulse-panel">
+        <div class="pulse-label"><span>此刻所在</span><strong id="activeEra">三国</strong></div>
+        <div class="pulse-story"><p>你上次停在</p><h2>五丈原的秋风</h2><span>诸葛亮的最后一次北伐 · 已读 62%</span></div>
+        <div class="pulse-progress"><div><span></span></div><button class="round-ink" data-go="reader" aria-label="继续阅读"><i data-lucide="play"></i></button></div>
+      </section>
+      <section class="moment-section">
+        <div class="section-label"><p>历史的入口</p><span>01 — 选择一种抵达方式</span></div>
+        <div class="moment-title"><h2>先抓住一个瞬间，<br>再看清它身后的时代。</h2><p>不必从头背起。一次宴席、一场雨、一封密信，都是理解大历史的入口。</p></div>
+        <div class="moment-grid">
+          <article class="moment-card moment-primary"><div class="moment-head"><span>汉末</span><span>建安十三年</span></div><div><p class="card-type">一封逼降信</p><h3>曹操写给孙权的信，<br>为何让江东的夜无法安睡？</h3><button class="story-button" data-go="reader">打开故事 <i data-lucide="arrow-up-right"></i></button></div></article>
+          <article class="moment-card moment-sand"><div class="era-slice">前 209</div><p class="card-type">一场未能如期抵达的雨</p><h3>大泽乡：<br>当赶路也会判死刑</h3><p>帝国最严密的齿轮，是如何从一场雨里松动的？</p><button class="card-arrow" data-story="大泽乡起义" aria-label="打开大泽乡故事"><i data-lucide="arrow-up-right"></i></button></article>
+          <article class="moment-card moment-blue"><div class="era-slice">前 1046</div><p class="card-type">一件留下铭文的器物</p><h3>利簋记住了<br>牧野之后的清晨</h3><p>传说中的战争，在青铜器腹底留下了可被复读的时间。</p><button class="card-arrow" data-story="利簋与牧野" aria-label="打开利簋故事"><i data-lucide="arrow-up-right"></i></button></article>
+        </div>
+      </section>
+      <section class="route-section" id="chronicle">
+        <div class="route-heading"><div><p class="kicker"><span></span>把朝代放回同一条河</p><h2>从神话的雾，<br>走到帝制的黄昏。</h2></div><p>点击任一时代，查看它的起点、转折与留下来的问题。</p></div>
+        <div class="river-line"><span></span></div>
+        <div class="era-rail" role="tablist" aria-label="历史时期">
+          <button class="era-chip" data-era="传说时代" data-time="约前 3000 — 前 2070" data-note="三皇五帝是后世对远古英雄的叙述。这里从神话、考古与早期文明三条线索并读。">传说时代</button>
+          <button class="era-chip" data-era="夏商周" data-time="约前 2070 — 前 256" data-note="甲骨文、青铜礼器与分封网络，让早期国家第一次有了可触摸的轮廓。">夏商周</button>
+          <button class="era-chip" data-era="春秋战国" data-time="前 770 — 前 221" data-note="旧秩序瓦解，百家争鸣与兼并战争一起改变了天下的尺度。">春秋战国</button>
+          <button class="era-chip" data-era="秦汉" data-time="前 221 — 220" data-note="统一的帝国、丝路的驼铃、外戚与宦官的角力，共同定义了何为“汉”。">秦汉</button>
+          <button class="era-chip selected" data-era="三国两晋南北朝" data-time="220 — 589" data-note="帝国崩解后，人群、信仰和权力重新流动。那些被称为乱世的年份，也孕育了新的中国。">三国两晋<br>南北朝</button>
+          <button class="era-chip" data-era="隋唐五代" data-time="581 — 960" data-note="大运河把南北连在一起，长安把远方带到眼前，繁盛也从这里开始变得复杂。">隋唐五代</button>
+          <button class="era-chip" data-era="宋辽夏金元" data-time="960 — 1368" data-note="多政权并立的时代，城市、商业与知识以前所未有的速度生长。">宋辽夏金元</button>
+          <button class="era-chip" data-era="明清" data-time="1368 — 1912" data-note="从全球贸易到近代冲击，传统王朝在最广阔的世界里迎来最终转型。">明清</button>
+        </div>
+        <div class="era-reveal"><span id="eraTime">220 — 589</span><h3 id="eraHeading">三国两晋南北朝</h3><p id="eraNote">帝国崩解后，人群、信仰和权力重新流动。那些被称为乱世的年份，也孕育了新的中国。</p><button class="plain-link" data-go="reader">进入这个时代 <i data-lucide="arrow-right"></i></button></div>
+      </section>
+      <section class="field-notes">
+        <div class="notes-intro"><p class="kicker"><span></span>不止于王朝</p><h2>从另一条线，<br>重新理解中国。</h2></div>
+        <div class="notes-list"><button class="note-row" data-topic="丝绸之路"><span>山河</span><strong>一条路，怎样把长安和罗马放进同一个世界？</strong><i data-lucide="arrow-up-right"></i></button><button class="note-row" data-topic="女性史"><span>人物</span><strong>她们不只是“某人的妻子”：被重新看见的女性历史</strong><i data-lucide="arrow-up-right"></i></button><button class="note-row" data-topic="科举"><span>制度</span><strong>一场考试，如何重写千百万人的上升路径？</strong><i data-lucide="arrow-up-right"></i></button></div>
+      </section>
+    </section>
+    <section class="view reader-view" id="reader">
+      <aside class="reader-index"><button class="back-home" data-go="home"><i data-lucide="arrow-left"></i><span>回到漫游</span></button><p>三国卷 · 建安十三年</p><ol><li class="done">01 风起荆州</li><li class="current">02 一封逼降信</li><li>03 孙权的犹疑</li><li>04 江面上的火</li></ol><div class="reader-meter"><span>阅读进度</span><strong>02 / 04</strong><div><i></i></div></div></aside>
+      <article class="reading-sheet"><div class="story-status"><span class="fact-tag">正史叙事</span><span>约 9 分钟</span><button class="save-story" id="saveStory" aria-label="收藏本篇"><i data-lucide="bookmark"></i></button></div><p class="story-overline">赤壁之前</p><h1>一封信，<br>与一个尚未决定的夜晚。</h1><p class="story-deck">建安十三年，曹操占领荆州后写信给孙权。信中自称“治水军八十万众”，希望与孙权“会猎于吴”。它看似是一次邀约，实则是一张要求江东交出命运的通知书。</p><div class="pull-line"><span>卷二 · 02</span><i></i><em>“今治水军八十万众，方与将军会猎于吴。”</em></div><p>这封信抵达时，孙权只有二十六岁。</p><p>他继承的并不是一张稳固的王座，而是父兄多年经营的江东。北方的曹操刚刚挟天子、定河北，又收下荆州。许多江东大臣主张投降：敌军兵多，名义上更握着汉室的权柄。向强者低头，似乎是最稳妥的答案。</p><p>但历史最有意思的地方，往往在于“最稳妥”并不总会发生。孙权召集群臣，周瑜与鲁肃主战。此后的赤壁，不是诸葛亮借来的一阵东风，而是一群人对兵力、疫病、江河、粮道与人心做出的判断。</p><aside class="source-note"><span>史料旁注</span><p>曹操致孙权书的内容见于《三国志·吴主传》裴松之注所引材料；“八十万”是曹操自称，不能直接等同于实际兵力。</p></aside><p>江面上的火还未燃起。此刻，所有人都在等待孙权开口。</p><div class="reader-next"><span>下一节</span><button>孙权为什么没有立刻投降？ <i data-lucide="arrow-right"></i></button></div></article>
+      <aside class="context-rail"><button class="rail-tab active" data-context="people"><i data-lucide="users"></i><span>人物</span></button><button class="rail-tab" data-context="map"><i data-lucide="map"></i><span>地图</span></button><button class="rail-tab" data-context="sources"><i data-lucide="scroll-text"></i><span>史料</span></button><div class="context-content" id="contextContent"><p class="context-eyebrow">此刻在场</p><button class="person-mini" data-person="孙权"><b>孙</b><span><strong>孙权</strong><small>江东之主，26 岁</small></span><i data-lucide="arrow-up-right"></i></button><button class="person-mini" data-person="曹操"><b>曹</b><span><strong>曹操</strong><small>丞相，北方实际控制者</small></span><i data-lucide="arrow-up-right"></i></button><button class="person-mini" data-person="周瑜"><b>周</b><span><strong>周瑜</strong><small>主战派核心将领</small></span><i data-lucide="arrow-up-right"></i></button></div></aside>
+    </section>
+    <section class="view atlas-view" id="atlas"><div class="view-banner"><p class="kicker"><span></span>时空中的历史</p><h1>山河从不只是背景。</h1><p>点击地图标记，观察一场战役如何被河流、道路和补给改变。</p></div><div class="atlas-layout"><div class="living-map"><div class="map-date">建安十三年 · 208</div><span class="water w-one"></span><span class="water w-two"></span><span class="march m-one"></span><span class="march m-two"></span><button class="map-marker cao" data-map-note="曹操军沿江南下，长途行军、水土不服与疫病，是比兵力更复杂的困难。">曹操军</button><button class="map-marker alliance" data-map-note="孙刘联军以江东水军为基础，选择在最熟悉的水域迎战。">孙刘联军</button><button class="map-marker redwall" data-map-note="赤壁的确切地点存在讨论，但它作为战局转折的意义并无疑问。">赤壁</button><p id="mapNarrative">选择一个节点，阅读山河怎样参与这场战争。</p></div><aside class="atlas-notes"><p>地图图层</p><button class="layer-active">战役走向</button><button>行政区划</button><button>人物行旅</button><hr><span>叙事提示</span><strong>有些问题，地图比文字更能回答。</strong></aside></div></section>
+    <section class="view people-view" id="people"><div class="view-banner"><p class="kicker"><span></span>不是孤立的英雄</p><h1>人物如何彼此改变。</h1><p>用关系看历史：盟友、敌人、君臣与同一个时代的共振。</p></div><div class="people-stage"><div class="people-legend"><span><i class="rel-dot enemy"></i>对手</span><span><i class="rel-dot ally"></i>联盟</span><span><i class="rel-dot court"></i>君臣</span></div><div class="relation-lines"><i class="line l-one enemy"></i><i class="line l-two ally"></i><i class="line l-three court"></i><i class="line l-four enemy"></i></div><button class="person-node node-cao" data-person="曹操"><span>曹</span><strong>曹操</strong><small>北方</small></button><button class="person-node node-sun" data-person="孙权"><span>孙</span><strong>孙权</strong><small>江东</small></button><button class="person-node node-liu" data-person="刘备"><span>刘</span><strong>刘备</strong><small>荆州</small></button><button class="person-node node-xian" data-person="汉献帝"><span>汉</span><strong>汉献帝</strong><small>许都</small></button><aside class="person-inspector" id="personInspector"><p>选择一个人物</p><h2>看见关系，而非标签。</h2><span>人物的立场常常变化；把他们放回当时的处境，历史才开始有了层次。</span></aside></div></section>
+  </main>
+  <footer class="site-footer"><a class="wordmark" href="#" data-go="home"><span class="seal">观</span><span>观澜中国史</span></a><p>为愿意慢慢读历史的人而作。</p><span>内容示例 · 上线前应由专业编辑完成史料核验与图片授权。</span></footer>
+  <div class="search-layer" id="searchLayer" hidden><div class="search-box"><div class="search-title"><span>检索历史</span><button class="icon-control" id="closeSearch" aria-label="关闭搜索"><i data-lucide="x"></i></button></div><label><i data-lucide="search"></i><input id="searchInput" placeholder="搜索人物、事件、时代或古今地名" autocomplete="off"></label><div id="searchResults"><p>你可以从 <button data-query="赤壁之战">赤壁之战</button>、<button data-query="秦始皇">秦始皇</button> 或 <button data-query="丝绸之路">丝绸之路</button> 开始。</p></div></div></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
