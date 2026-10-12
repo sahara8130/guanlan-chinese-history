@@ -9,7 +9,17 @@ const profiles = {
   "周瑜":["周瑜","江东主战派的前线统帅。他对水战与江东军情的判断，是赤壁战局的关键。"]
 };
 function toastMessage(message){toast.textContent=message;toast.classList.add("show");clearTimeout(window.toastClock);window.toastClock=setTimeout(()=>toast.classList.remove("show"),2200)}
-function setView(id){document.querySelectorAll(".view").forEach(view=>view.classList.toggle("active-view",view.id===id));document.querySelectorAll(".main-nav [data-go]").forEach(button=>button.classList.toggle("nav-active",button.dataset.go===id));window.scrollTo({top:0,behavior:"smooth"})}
+function setView(id){
+  if(id==="chronicle"){
+    document.querySelectorAll(".view").forEach(view=>view.classList.toggle("active-view",view.id==="home"));
+    document.querySelectorAll(".main-nav [data-go]").forEach(button=>button.classList.toggle("nav-active",button.dataset.go==="chronicle"));
+    document.getElementById("chronicle").scrollIntoView({behavior:"smooth",block:"start"});
+    return;
+  }
+  document.querySelectorAll(".view").forEach(view=>view.classList.toggle("active-view",view.id===id));
+  document.querySelectorAll(".main-nav [data-go]").forEach(button=>button.classList.toggle("nav-active",button.dataset.go===id));
+  window.scrollTo({top:0,behavior:"smooth"});
+}
 document.querySelectorAll("[data-go]").forEach(button=>button.addEventListener("click",event=>{event.preventDefault();setView(button.dataset.go)}));
 eraButtons.forEach(button=>button.addEventListener("click",()=>{eraButtons.forEach(item=>item.classList.remove("selected"));button.classList.add("selected");document.getElementById("activeEra").textContent=button.dataset.era;document.getElementById("eraTime").textContent=button.dataset.time;document.getElementById("eraHeading").textContent=button.dataset.era;document.getElementById("eraNote").textContent=button.dataset.note;button.scrollIntoView({behavior:"smooth",inline:"center",block:"nearest"})}));
 document.querySelectorAll("[data-story]").forEach(button=>button.addEventListener("click",()=>{setView("reader");toastMessage(`正在打开《${button.dataset.story}》`)}));
